@@ -1,0 +1,43 @@
+﻿<Window x:Class="Deliverable_7.frmMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Wanna die???" Height="726.105" Width="1439.993" ResizeMode="CanResizeWithGrip" Background="DimGray" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" >
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Duration="00:00:01" Storyboard.TargetProperty="Opacity" From="0" To="1" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid HorizontalAlignment="Center" Width="1422" Height="682" VerticalAlignment="Center" Margin="10,-16,-8,-4" >
+
+        <Grid x:Name="grdGameBorad" Height="698" Margin="0,0,347,-16"  VerticalAlignment="Top" />
+
+        <TextBox x:Name="tbMapDet" HorizontalAlignment="Left" Height="161" Margin="1080,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" BorderThickness="0,0,0,3"/>
+        <TextBox x:Name="tbItemDet" HorizontalAlignment="Left" Height="139" Margin="1080,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" BorderThickness="0,0,0,3"/>
+        <Button x:Name="btnUp" Content="Up" HorizontalAlignment="Left" Margin="1219,412,0,0" VerticalAlignment="Top" Width="74" Height="60" Click="BtnUp_Click"/>
+        <Button x:Name="btnRefreshMap" Content="Refresh" HorizontalAlignment="Left" Margin="1206,619,0,0" VerticalAlignment="Top" Width="99" Height="34" Click="btnRefresh_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="1.268"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnRight" Content="Right" HorizontalAlignment="Right" Margin="0,472,58,0" VerticalAlignment="Top" Width="70" Height="64" Click="BtnRight_Click" RenderTransformOrigin="0.8,-0.882"/>
+        <Button x:Name="btnDown" Content="Down" HorizontalAlignment="Left" Margin="1219,536,0,0" VerticalAlignment="Top" Width="76" Height="65" Click="BtnDown_Click"/>
+        <Button x:Name="btnLeft" Content="Left" HorizontalAlignment="Right" Margin="0,472,204,0" VerticalAlignment="Top" Width="72" Height="64" Click="BtnLeft_Click"/>
+        <Menu HorizontalAlignment="Left" Height="32" Margin="1122,8,0,0" VerticalAlignment="Top" Width="Auto">
+            <MenuItem Header="Save Game" HorizontalAlignment="Center" VerticalAlignment="Top" Height="32" Click="MenuItem_Click"/>
+            <MenuItem Header="Load Game" Height="32" Click="MenuItem_Click_1"/>
+        </Menu>
+
+    </Grid>
+</Window>

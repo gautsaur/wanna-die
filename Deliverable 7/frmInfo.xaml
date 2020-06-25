@@ -1,0 +1,143 @@
+﻿<Window x:Class="Deliverable_7.frmInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="frmInfo" Height="693.105" Width="1432.493" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" >
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Duration="00:00:01" Storyboard.TargetProperty="Opacity" From="0" To="1" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="149*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush  ImageSource="InfoBackground.jpeg" Stretch="Fill"/>
+
+        </Grid.Background>
+
+        <TextBlock HorizontalAlignment="Left" Margin="557,-10,0,587" TextWrapping="Wrap" Width="775" FontFamily="Viner Hand ITC" FontSize="72" Grid.ColumnSpan="2" RenderTransformOrigin="0.426,3.542"><Run Text="Welcome to Death!"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <Image Margin="48,114,685,499" Source="skull.png" Stretch="Fill" RenderTransformOrigin="0.381,1.007" Grid.Column="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-1.863"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" Margin="377,74,0,309" TextWrapping="Wrap" Width="385" FontFamily="Viner Hand ITC" FontSize="24" RenderTransformOrigin="0.426,3.542" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.176"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="Everyone dies, or do they?"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="125,119,0,264" TextWrapping="Wrap" Width="565" FontFamily="Segoe Script" FontSize="22" RenderTransformOrigin="0.426,3.542" Grid.Column="1" FontWeight="Bold">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.176"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="This is your chance to survive the death."/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="124,170,0,150" TextWrapping="Wrap" Width="661" FontFamily="Segoe Script" FontSize="22" RenderTransformOrigin="0.426,3.542" Grid.Column="1" FontWeight="Bold" Text="You'll be locked in a map of horrors where you'll face demons and decide whether you fight back and run away.">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.176"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="130,283,0,37" TextWrapping="Wrap" Width="643" FontFamily="Segoe Script" FontSize="22" RenderTransformOrigin="0.426,3.542" FontWeight="Bold" Text="You'll have options to regain life points with potions and have chance to use weapons to destroy the demons." Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.176"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="131,384,0,143" TextWrapping="Wrap" Width="646" FontFamily="Segoe Script" FontSize="22" RenderTransformOrigin="0.426,3.542" FontWeight="Bold" Text="To escape the death, you need to explore every cell of map you encounter and defeat demons until you have the key to the secret door of hope." Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.176"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="116,510,0,76" TextWrapping="Wrap" Width="676" FontFamily="Segoe Script" FontSize="36" RenderTransformOrigin="0.426,3.542" FontWeight="Bold" Text="You fail to escape alive, you'll die!" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.03"/>
+                    <RotateTransform Angle="0.161"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <Button x:Name="btnYes" Content="Ready" HorizontalAlignment="Left"  VerticalAlignment="Top" MouseEnter="BtnYes_MouseEnter" Cursor="Hand"  Width="246" Margin="444,572,0,0" Height="84" Foreground="White" FontFamily="Chiller" FontSize="72" RenderTransformOrigin="1.463,4.295" Grid.Column="1" Click="BtnYes_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.601"/>
+                    <TranslateTransform X="-1.878" Y="1.121"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFFBFBFB"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image Margin="53,170,685,443" Source="skull.png" Stretch="Fill" RenderTransformOrigin="0.381,1.007" Grid.Column="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-1.863"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="52,274,685,339" Source="skull.png" Stretch="Fill" RenderTransformOrigin="0.381,1.007" Grid.Column="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-1.863"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="51,376,685,237" Source="skull.png" Stretch="Fill" RenderTransformOrigin="0.381,1.007" Grid.Column="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-1.863"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+    </Grid>
+</Window>

@@ -1,0 +1,82 @@
+﻿<Window x:Class="Deliverable_7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:gif ="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="Game" Height="693.105" Width="1432.493" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" FontFamily="Gill Sans MT" FontSize="20" Background="#FF423D3D" >
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+
+    <Grid x:Name="grdBackGround" Margin="0,0,0,0">
+        <Image gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AnimatedSource="Images/into.gif" HorizontalAlignment ="Center" VerticalAlignment="Center" Width="Auto" Height="Auto" Stretch="Fill" Margin="0,-2,0,2" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.196"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Grid x:Name ="grdIntro" HorizontalAlignment="Right" Width="Auto" Height="Auto" VerticalAlignment="Bottom" Margin="1164,357,-2,39" RenderTransformOrigin="0.627,0.565">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="58*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="31.068"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+
+            <Image x:Name="imgNewGame" HorizontalAlignment="Right" MouseDown="ImgNewGame_MouseDown" MouseEnter="ImgNewGame_MouseEnter" VerticalAlignment="Bottom" Margin="-78,-108,4,92.5" Grid.Row="0" Source="NewGame.png" Stretch="Fill" RenderTransformOrigin="-0.165,1.333" Height="88" Width="286">
+                <Image.Style>
+                    <Style TargetType="Image">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+            <Image x:Name="imgLoadGame" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="-138,-10,54,66"  MouseDown="ImgLoadGame_MouseDown" MouseEnter="ImgLoadGame_MouseEnter" Source="Load Game.png" Stretch="Fill" Height="88" Width="296" Grid.RowSpan="2">
+                <Image.Style>
+                    <Style TargetType="Image">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Cursor" Value="Hand"/>
+
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+
+            <Image x:Name="imgExitGame" HorizontalAlignment="Right" MouseDown="ImgExitGame_MouseDown" MouseEnter="ImgExitGame_MouseEnter" VerticalAlignment="Bottom" Margin="-204,0,128,10"  Grid.Row="1" Source="Exit.png" Stretch="Fill" Grid.RowSpan="4" Height="88" Width="288">
+                <Image.Style>
+                    <Style TargetType="Image">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+        </Grid>
+        <Image Source="data/Wanna Die.png" HorizontalAlignment="Left" Height="222" Margin="-32,88,0,0" VerticalAlignment="Top" Width="560" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-28.388"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</Window>

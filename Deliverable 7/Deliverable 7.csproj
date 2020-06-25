@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E62D9DF8-F3C3-4C32-A7A1-DBC68ECCB8D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Deliverable_7</RootNamespace>
+    <AssemblyName>Deliverable 7</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.18\lib\net\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="frmCharacter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmExitDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmGameOver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmMonster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmCharacter.xaml.cs">
+      <DependentUpon>frmCharacter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmExitDialog.xaml.cs">
+      <DependentUpon>frmExitDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmGameOver.xaml.cs">
+      <DependentUpon>frmGameOver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfo.xaml.cs">
+      <DependentUpon>frmInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmItem.xaml.cs">
+      <DependentUpon>frmItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.xaml.cs">
+      <DependentUpon>frmMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmMonster.xaml.cs">
+      <DependentUpon>frmMonster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
+      <Project>{3e88105a-ac28-45c3-98a0-dcc088edd0f4}</Project>
+      <Name>ClassLibrary1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\5863.jpg" />
+    <Resource Include="data\AreYouSure.png" />
+    <Resource Include="data\floor-blue-room-patterns-grey-lines-depth-of-field-perspective-1680x1050-wallpaper-466788.jpg" />
+    <Resource Include="data\InfoBackground.jpeg" />
+    <Resource Include="data\into.gif" />
+    <Resource Include="data\monster.gif" />
+    <Resource Include="data\reaper-artwork-1.png" />
+    <Resource Include="data\skull.png" />
+    <Resource Include="data\texturea.jpg" />
+    <Resource Include="data\Wanna Die.png" />
+    <Resource Include="data\white-crack-png-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\5863.jpg" />
+    <Resource Include="Images\archery.png" />
+    <Resource Include="Images\AreYouSure.png" />
+    <Resource Include="Images\asda.jpg" />
+    <Resource Include="Images\avatar.png" />
+    <Resource Include="Images\Deliverable 6.jpeg" />
+    <Resource Include="Images\dragon%27s blood.png" />
+    <Resource Include="Images\drop of blood.png" />
+    <Resource Include="Images\drop.png" />
+    <Resource Include="Images\elixir.png" />
+    <Resource Include="Images\feArrow.png" />
+    <Resource Include="Images\feDagger.png" />
+    <Resource Include="Images\feIdle.png" />
+    <Resource Include="Images\feSword.png" />
+    <Resource Include="Images\feWand.png" />
+    <Resource Include="Images\floor-blue-room-patterns-grey-lines-depth-of-field-perspective-1680x1050-wallpaper-466788.jpg" />
+    <Resource Include="Images\InfoBackground.jpeg" />
+    <Resource Include="Images\into.gif" />
+    <Resource Include="Images\itemBack.jpg" />
+    <Resource Include="Images\key.png" />
+    <Resource Include="Images\knife.png" />
+    <Resource Include="Images\magic-wand.png" />
+    <Resource Include="Images\mArrow.png" />
+    <Resource Include="Images\mDagger.png" />
+    <Resource Include="Images\mIdle.jpg" />
+    <Resource Include="Images\monster.gif" />
+    <Resource Include="Images\mSword.png" />
+    <Resource Include="Images\mWand.gif" />
+    <Resource Include="Images\orc.png" />
+    <Resource Include="Images\rat.png" />
+    <Resource Include="Images\reaper-artwork-1.png" />
+    <Resource Include="Images\saber.png" />
+    <Resource Include="Images\skudsll.png" />
+    <Resource Include="Images\skull.png" />
+    <Resource Include="Images\slug.png" />
+    <Resource Include="Images\texturea.jpg" />
+    <Resource Include="Images\Wanna Die.png" />
+    <Resource Include="Images\white-crack-png-8.png" />
+    <Resource Include="Images\wine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\Deliverable 7.jpeg" />
+    <Resource Include="Cool Text - Choose Your Character 320290065866719.png" />
+    <Resource Include="cooltext320571217533745.png" />
+    <Resource Include="cooltext320571248830951.png" />
+    <Resource Include="cooltext320571278419162.png" />
+    <Resource Include="Exit.png" />
+    <Resource Include="feArrow.jpg" />
+    <Content Include="data\Phantom.wav" />
+    <Content Include="feDagger.svg" />
+    <Resource Include="feIdle.jpg" />
+    <Resource Include="feSword.jpg" />
+    <Resource Include="feWand.png" />
+    <Resource Include="InfoBackground.jpeg" />
+    <Resource Include="kisspng-skull-and-bones-skull-and-crossbones-human-skull-s-thick-clipart-5ad80f0d95f747.8224474115241090696143.jpg" />
+    <Resource Include="Load Game.png" />
+    <Resource Include="man-standing-silhouette-9.png" />
+    <Resource Include="NewGame.png" />
+    <Resource Include="Options.png" />
+    <Resource Include="skull.png" />
+    <Resource Include="woman-silhouette-13.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
